@@ -1314,7 +1314,7 @@ class EnclosurePlugin(octoprint.plugin.StartupPlugin, octoprint.plugin.TemplateP
                 sudo_str = "sudo "
             else:
                 sudo_str = ""
-            cmd = sudo_str + "python " + script
+            cmd = sudo_str + "python3 " + script
             if  self._settings.get(["debug_temperature_log"]) is True:
                 self._logger.debug("Temperature SHT40 cmd: %s", cmd)
             stdout = (Popen(cmd, shell=True, stdout=PIPE).stdout).read()
